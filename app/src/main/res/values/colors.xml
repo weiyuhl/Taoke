@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="tabTextNormal">#3d3d3d</color>
+    <color name="tabTextSelect">#ff2d55</color>
+    <color name="tabDriver">#AAA6AE</color>
+
+    <color name="barSearchBox">#f5f5f5</color>
+    <color name="barSearchTextColor">#bdbdbd</color>
+
+
+    <color name="indicatorTextColor">#666666</color>
+    <color name="indicatorTextSelected">#3d3d3d</color>
+
+
+    <color name="kitkatStateBarColor">#ffcccccc</color>
+    <color name="meHeadTopColor">#ff2d55</color>
+    <color name="meDiverColor">#e5e5e5</color>
+
+
+    <color name="dialogBackgroundColor">#80000000</color>
+    <color name="top_bg">#808080</color>
+
+</resources>

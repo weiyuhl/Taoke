@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <include layout="@layout/search_layout"
+        />
+
+    <!--<com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/cheapTabLayout"
+        style="@style/MyTabLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:xTabIndicatorColor="@color/tabTextNormal"
+        app:xTabIndicatorHeight="2dp"
+        app:xTabIndicatorWidth="16dp"
+        app:xTabMode="scrollable"
+        app:xTabSelectedTextColor="@color/tabTextNormal"
+        app:xTabSelectedTextSize="18sp"
+        app:xTabTextColor="@color/indicatorTextColor"
+        app:xTabTextSize="15sp" />-->
+
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/cheapPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

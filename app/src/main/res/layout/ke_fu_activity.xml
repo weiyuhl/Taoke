@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jsyh.buyer.ui.me.kefu.KeFuActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:text="客服"/>
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tabDriver"
+             />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/qq"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:background="?android:selectableItemBackground"
+        android:drawableLeft="@drawable/share_qq"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:paddingLeft="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4" />
+
+    <View
+        android:id="@+id/driver1"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/tabDriver"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qq"
+        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/wechat"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:background="?android:selectableItemBackground"
+        android:drawableLeft="@drawable/share_wechat"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text=""
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver1" />
+
+
+    <View
+        android:id="@+id/driver2"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/tabDriver"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wechat"
+        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:background="?android:selectableItemBackground"
+
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text=""
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver2" />
+
+</android.support.constraint.ConstraintLayout>

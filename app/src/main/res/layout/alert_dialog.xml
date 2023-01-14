@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="80dp"
+            android:textColor="#000000"
+
+            android:background="@drawable/alert_dialog_bg_top"
+            android:textSize="@dimen/sp_common_third" />
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <!--android:visibility="gone"-->
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:text="发现最新版本"
+                android:background="@drawable/alert_dialog_bg_top"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:minHeight="80dp"
+                android:maxHeight="150dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e5e5" />
+
+        <RelativeLayout
+            android:id="@+id/rlNormalPanle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/tv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/view"
+                android:background="@drawable/cancel_btn_select"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/top_bg"
+                android:textSize="@dimen/sp_common_third" />
+
+            <TextView
+                android:id="@+id/view"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#e5e5e5" />
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/view"
+                android:background="@drawable/confirm_btn_select"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/top_bg"
+                android:textSize="@dimen/sp_common_third" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/btnForceUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/confirm_btn_select2"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/top_bg"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_common_third" />
+
+    </LinearLayout>
+
+</LinearLayout>

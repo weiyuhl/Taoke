@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.compileSdkVersion
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+//    provided 'com.android.support:recyclerview-v7:25.0.1'
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    provided rootProject.ext.dependencies["recycler"]
+}
+
+// gradle uploadArchives
+//apply from: 'https://raw.githubusercontent.com/bingoogolapple/PublishAar/master/central-publish.gradle'

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="alert_dialog_width">300dp</dimen>
+    <dimen name="alert_dialog_heigh">150dp</dimen>
+
+
+
+    <dimen name="goodsItemHeight">241dp</dimen>
+    <dimen name="goodsItemWidth">174dp</dimen>
+
+    <dimen name="goodsItemParentPadding">9dp</dimen>
+    <dimen name="goodsItemPadding">4.5dp</dimen>
+
+    <dimen name="homeCategoryTop">24dp</dimen>
+    <dimen name="homeCategoryBottom">20.5dp</dimen>
+    <dimen name="homeCategoryLR">15dp</dimen>
+
+
+    <dimen name="sp_common_zero">10sp</dimen>
+    <dimen name="sp_common_first">12sp</dimen>
+    <dimen name="sp_common_second">14sp</dimen>
+    <dimen name="sp_common_third">18sp</dimen>
+    <dimen name="sp_common_fourth">22sp</dimen>
+    <dimen name="sp_common_five">25sp</dimen>
+
+</resources>

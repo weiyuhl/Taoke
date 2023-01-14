@@ -1,0 +1,182 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    aaptOptions{
+
+        cruncherEnabled false
+    }
+
+
+	dexOptions{
+		jumboMode true
+	}
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.compileSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+
+        manifestPlaceholders = [
+                package: rootProject.ext.applicationId,
+                appName: rootProject.ext.appName]
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+        if (rootProject.hasProperty('appName')) {
+            resValue("string", "my_app_name", rootProject.ext.appName)
+        }
+        if (rootProject.hasProperty('inid')) {
+            resValue("string", "inid", rootProject.ext.inid)
+        }
+
+        if (rootProject.hasProperty('api_host')) {
+
+            resValue("string", "api_host", rootProject.ext.api_host)
+        }
+        if (rootProject.hasProperty('api_update')) {
+
+            resValue("string", "api_update", rootProject.ext.api_update)
+        }
+
+        if (rootProject.hasProperty('tencent')) {
+
+            resValue("string", "tencent", rootProject.ext.tencent)
+        }
+        if (rootProject.hasProperty('ali_mm')) {
+            resValue("string", "ali_mm", rootProject.ext.ali_mm)
+
+        }
+        /*推送*/
+        if (rootProject.hasProperty('has_jpush')) {
+            resValue("bool", "has_jpush", rootProject.ext.has_jpush)
+        }
+
+        if (rootProject.hasProperty('jpush_appkey')) {
+
+            resValue("string", "jpush_appkey", rootProject.ext.jpush_appkey)
+        }
+        /*分享*/
+        if (rootProject.hasProperty('has_share')) {
+            resValue("bool", "has_share", rootProject.ext.has_share)
+        }
+        if (rootProject.hasProperty('wx_app_key')) {
+
+            resValue("string", "wx_app_key", rootProject.ext.wx_app_key)
+        }
+        if (rootProject.hasProperty('wb_app_key')) {
+
+            resValue("string", "wb_app_key", rootProject.ext.wb_app_key)
+        }
+        if (rootProject.hasProperty('wb_redirect_url')) {
+
+            resValue("string", "wb_redirect_url", rootProject.ext.wb_redirect_url)
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs/jniLibs']
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file(rootProject.ext.keystore)
+            storePassword rootProject.ext.keystore_password
+            keyAlias rootProject.ext.keystore_alias
+            keyPassword rootProject.ext.keystore_password
+        }
+        release {
+            storeFile file(rootProject.ext.keystore)
+            storePassword rootProject.ext.keystore_password
+            keyAlias rootProject.ext.keystore_alias
+            keyPassword rootProject.ext.keystore_password
+
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["constraint-layout"]
+    compile rootProject.ext.dependencies["retrofit"]
+    compile rootProject.ext.dependencies["logging-interceptor"]
+    compile rootProject.ext.dependencies["rxandroid"]
+    compile rootProject.ext.dependencies["converter-gson"]
+    compile rootProject.ext.dependencies["adapter-rxjava"]
+    compile rootProject.ext.dependencies["rxjava"]
+    compile rootProject.ext.dependencies["gson"]
+    compile rootProject.ext.dependencies["rxcache"]
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    compile rootProject.ext.dependencies["logger"]
+    compile rootProject.ext.dependencies["xbanner"]
+    compile rootProject.ext.dependencies["nineoldandroids"]
+    compile rootProject.ext.dependencies["eventbus"]
+    compile rootProject.ext.dependencies["easypermissions"]
+//    compile rootProject.ext.dependencies["tiny"]
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':refreshWithMoreLibrary')
+    compile project(':push_library')
+    compile project(':magicindicator')
+    compile project(':share_library')
+    compile project(':tiny')
+
+    //fastjson
+    compile(name: 'fastjson-1.2.9', ext: 'jar')
+    //支付
+    compile(name: 'alipaySingle-20160825', ext: 'jar')
+    //登陆
+    compile(name: 'alibabauth_core-1.1.4', ext: 'jar')
+    compile(name: 'alibabauth_ui-1.1.4', ext: 'aar')
+    compile(name: 'alibabauth_ext-1.1.4', ext: 'jar')
+    //安全基础
+    compile(name: 'securityguardaar3-5.1.81', ext: 'aar')
+    //【可选】安全高级，如使用了发放红包、优惠券高级功能，则必须引入
+    compile(name: 'securitybodyaar3-5.1.25', ext: 'aar')
+    //Mtop网关
+    compile(name: 'mtopsdk_allinone_open-1.2.2.4', ext: 'jar')
+    //applink
+    compile(name: 'alibc_applink-2.0.0.9', ext: 'jar')
+    //UT
+    compile(name: 'utdid4all-1.1.5.3_proguard', ext: 'jar')
+    //    compile(name: 'app-monitor-sdk-2.5.1.3_for_bc_proguard', ext: 'aar')
+
+    //电商SDK
+    compile(name: 'alibc_trade_sdk-3.1.1.11', ext: 'aar')
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+
+
+}

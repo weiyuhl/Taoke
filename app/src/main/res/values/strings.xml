@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">淘宝客</string>
+
+
+    <string-array name="tab_names">
+
+        <item>首页</item>
+        <item>白菜价</item>
+        <item>9.9包邮</item>
+        <item>我的</item>
+
+    </string-array>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="no_more">没有更多数据了哦!</string>
+    <string name="has_share_tips">您未开启分享功能</string>
+
+
+    <!--<string name="app_update">http://www.appbsl.com/app_port/VersionInfo</string>-->
+    <string name="inside_version_code">20170609</string>
+
+</resources>

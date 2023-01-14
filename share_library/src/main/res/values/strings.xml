@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="sina">新浪微博</string>
+    <string name="timeLine">朋友圈</string>
+    <string name="sceneSession">微信好友</string>
+    <string name="tencetQQ">QQ好友</string>
+    <string name="tencetQzone">QQ空间</string>
+</resources>

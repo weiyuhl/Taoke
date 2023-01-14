@@ -1,0 +1,51 @@
+ext{
+
+
+    applicationId='com.kingkr.krutspf'
+    appName='淘宝客s'
+
+    versionCode=1
+
+    versionName='1.0'
+
+    //接口地址
+//    api_host='http://60.205.176.238/'
+    api_host='http://tbk-t.99-k.com/'
+
+    //升级
+    api_update='http://www.appbsl.com/app_port/VersionInfo'
+
+    //应用签名
+    keystore='../taobaoke.jks'
+    keystore_alias='taobaoke'
+    keystore_password='momoliang'
+
+    //阿里妈妈
+    ali_mm='mm_121381166_23350710_77656607'
+
+    //是否开始推送
+    has_jpush='true'
+
+    //极光推送
+    jpush_appkey='32d2f5d6637cba3bcbcd5577'
+
+    //是否开启分享
+    has_share='true'
+
+    //QQ配置
+    tencent='1105468911'
+//    tencent='1106157904'
+
+    //微信
+    wx_app_key='wxe80b266fa7c3127c'
+
+
+    //微博配置
+    wb_app_key='3898464068'
+    wb_redirect_url='https://api.weibo.com/oauth2/default.html' //回调地址
+
+//    inid='com.jsyh.buyer'
+    inid='com.kingkr.krutspf'
+
+
+}
